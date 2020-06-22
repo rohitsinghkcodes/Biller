@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    tools:context=".AlertBox"
+    android:orientation="vertical"
+    android:padding="50dp"
+    >
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter item name"
+        android:textAlignment="center">
+    </EditText>
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the rate"
+        android:textAlignment="center"
+        android:inputType="numberDecimal">
+    </EditText>
+    <EditText
+        android:layout_marginTop="5dp"
+        android:id="@+id/qty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the quantity"
+        android:textAlignment="center"
+        android:inputType="number">
+    </EditText>
+
+</LinearLayout>

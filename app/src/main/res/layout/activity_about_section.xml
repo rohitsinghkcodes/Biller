@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".about_section">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:foregroundGravity="center"
+                app:srcCompat="@drawable/biller_icon_1" />
+
+            <TextView
+                android:id="@+id/Details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="This is an bill calculation checker application which makes the calculation part very easy in case of bills.\n\n   You just have to click on the add icon and then enter your entries, at last just press Add item. That's it, your entry is done and calculated as well.\n\n You can also check your bill summary by clicking on the Summary button."
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+
+                />
+
+            <TextView
+                android:id="@+id/getTouch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="80dp"
+                android:gravity="center"
+                android:text="Get in touch >"
+                android:textColor="@color/grey"
+                android:textSize="21dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/ld_in"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/ld_in"/>
+                <ImageView
+                    android:id="@+id/git"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/github"/>
+
+                <ImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/twit"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
