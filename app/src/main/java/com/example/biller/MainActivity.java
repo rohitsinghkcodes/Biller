@@ -107,14 +107,46 @@ public class MainActivity extends AppCompatActivity {
                          String q1 = qty.getText().toString();
                          String name = nm.getText().toString();
 
-                         float r = Float.parseFloat(r1);
+                         int x1=0,x2=0;
+                         if(r1.length()==0)
+                         {
+                             r1 = "0";
+                             x1=1;
+                         }
+                         if(q1.length()==0)
+                         {
+                             q1 = "0";
+                             x2=1;
+                         }
+                         if(name.length()==0)
+                         {
+                             name = "Empty name";
+                         }
+
+                         if(x1==1 ||x2==1)
+                         {
+                             String addon="";
+                             if(x1==0)
+                             {
+                                 addon="in quantity";
+                             }
+                             else if(x2==0)
+                             {
+                                 addon="in rate";
+                             }
+                             Toast.makeText(MainActivity.this, " Must enter a value next time "+ addon , Toast.LENGTH_SHORT).show();
+                         }
+
+                         double r = Double.parseDouble(r1);
                          int q = Integer.parseInt(q1);
 
-                         float k = r*q;
+
+
+                         Double k = r*q;
                          tv1.setText("> "+k+" <");
                          totalVal+=k;
 
-                         str+="\n" + name + ":    " + r1 + " X " + q1 + "  =  " + k;
+                         str+="\n" + name + ":    " + r1 + " X " + q1 + "  =  \u20B9 " + k;
 
                          tv3.setVisibility(View.VISIBLE);
                          curt.setVisibility(View.VISIBLE);
@@ -134,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,summary.class);
-                intent.putExtra("detailSummary",str);
+                String strNew = str+ "\n\nTotal Amount:  \u20B9 " + totalVal;
+                intent.putExtra("detailSummary",strNew);
                 startActivity(intent);
             }
         });
